@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    font-family:Tangerine;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 90vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+.panel{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius:50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition:flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 124px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin:0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.5s ease-in 1s;
+}
+
+@media (max-width: 480px){
+    .container{
+        width:100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(4){
+        display: none;
+    }
+}
